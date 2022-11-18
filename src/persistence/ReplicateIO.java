@@ -5,7 +5,7 @@ import domain.*;
 import domain.ReplicateException;
 public class ReplicateIO {
     
-    public void abrir00(File file) throws ReplicateException{
+    public void abra00(File file) throws ReplicateException{
         try{
             throw new ReplicateException(ReplicateException.OPCION_EN_CONSTRUCCION);
         }catch(ReplicateException e){
@@ -15,7 +15,7 @@ public class ReplicateIO {
 
     }
     
-    public void guardar00(File file) throws ReplicateException{
+    public void guarde00(File file) throws ReplicateException{
         try{
             throw new ReplicateException(ReplicateException.OPCION_EN_CONSTRUCCION);
         }catch(ReplicateException e){
@@ -24,7 +24,7 @@ public class ReplicateIO {
         }
 
     }
-    public void importar(File file) throws ReplicateException{
+    public void importe(File file) throws ReplicateException{
         try{
             throw new ReplicateException(ReplicateException.OPCION_EN_CONSTRUCCION);
         }catch(ReplicateException e){
@@ -33,7 +33,7 @@ public class ReplicateIO {
         }
 
     }
-    public void exportar(File file) throws ReplicateException{
+    public void exporte(File file) throws ReplicateException{
         try{
             throw new ReplicateException(ReplicateException.OPCION_EN_CONSTRUCCION);
         }catch(ReplicateException e){
