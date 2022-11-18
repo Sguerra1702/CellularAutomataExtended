@@ -58,6 +58,7 @@ public class AManufacturingGUI extends JFrame{
         menuwu.add(importFile);
         menuwu.add(exportFile);
         menuwu.add(rageQuit);
+        setJMenuBar(yasaquenmedepoobporfavor);
     }
 
     private void prepareActions(){
@@ -114,7 +115,12 @@ public class AManufacturingGUI extends JFrame{
     }
 
     private void opcionSalir(){
-
+        if (JOptionPane.showConfirmDialog(rootPane, "Are you sure you want to exit? :c", "Pls don't go TwT", JOptionPane.YES_NO_OPTION
+        ) == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }else {
+            setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        }
     }
 
 }
