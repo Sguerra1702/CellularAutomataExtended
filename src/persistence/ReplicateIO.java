@@ -1,8 +1,8 @@
 package persistence;
 import java.io.*;
 import domain.*;
-
 import domain.ReplicateException;
+
 public class ReplicateIO {
     
     public static void abra00(File file) throws ReplicateException{
