@@ -1,6 +1,10 @@
 package domain;
 import java.util.*;
+
+import persistence.ReplicateIO;
+
 import java.awt.Color;
+import java.io.File;
 
 /*No olviden adicionar la documentacion*/
 public class AManufacturing{
@@ -104,6 +108,14 @@ public class AManufacturing{
                 }
             }    
         }
+    }
+    
+
+    //seccion de persistencia
+
+    public void guardar(File f) throws ReplicateException{
+        ReplicateIO.guarde00(f);
+
     }
 
 }
