@@ -13,6 +13,12 @@ public class AManufacturingGUI extends JFrame{
     private JPanel  controlPanel;
     private PhotoAManufacturing photo;
     private AManufacturing aManufacturing;
+
+    private JMenu menuwu;
+
+    private JMenuBar yasaquenmedepoobporfavor;
+
+    private JMenuItem newFile, open, saveAs, importFile, exportFile, rageQuit;
    
     
     private AManufacturingGUI() {
@@ -30,9 +36,28 @@ public class AManufacturingGUI extends JFrame{
         setLayout(new BorderLayout());
         add(photo,BorderLayout.NORTH);
         add(ticTacButton,BorderLayout.SOUTH);
-        setSize(new Dimension(SIDE*SIZE+15,SIDE*SIZE+72)); 
+        setSize(new Dimension(SIDE*SIZE+15,SIDE*SIZE+72));
+        prepareElementsMenu();
         setResizable(false);
         photo.repaint();
+    }
+
+    public void prepareElementsMenu(){
+        yasaquenmedepoobporfavor = new JMenuBar();
+        menuwu = new JMenu("Archivo");
+        yasaquenmedepoobporfavor.add(menuwu);
+        newFile = new JMenuItem("Nuevo");
+        open = new JMenuItem("Abrir");
+        saveAs = new JMenuItem("Guardar cómo");
+        importFile = new JMenuItem("Importar");
+        exportFile = new JMenuItem("Exportar como");
+        rageQuit = new JMenuItem("Salir");
+        menuwu.add(newFile);
+        menuwu.add(open);
+        menuwu.add(saveAs);
+        menuwu.add(importFile);
+        menuwu.add(exportFile);
+        menuwu.add(rageQuit);
     }
 
     private void prepareActions(){
@@ -43,10 +68,21 @@ public class AManufacturingGUI extends JFrame{
                     ticTacButtonAction();
                 }
             });
+        prepareActionsMenu();
+
     }
     private void ticTacButtonAction() {
         aManufacturing.ticTac();
         photo.repaint();
+    }
+
+    public void prepareActionsMenu(){
+        newFile.addActionListener(e -> opcionNuevo());
+        open.addActionListener(e -> opcionAbrir());
+        saveAs.addActionListener(e -> opcionGuardar());
+        importFile.addActionListener(e -> opcionImportar());
+        exportFile.addActionListener(e -> opcionExportar());
+        rageQuit.addActionListener(e -> opcionSalir());
     }
 
     public AManufacturing getaManufacturing(){
@@ -56,7 +92,31 @@ public class AManufacturingGUI extends JFrame{
     public static void main(String[] args) {
         AManufacturingGUI ca=new AManufacturingGUI();
         ca.setVisible(true);
-    }  
+    }
+
+    private void opcionNuevo(){
+
+    }
+
+    private void opcionAbrir(){
+
+    }
+    private void opcionGuardar(){
+
+    }
+
+    private void opcionImportar(){
+
+    }
+
+    private void opcionExportar(){
+
+    }
+
+    private void opcionSalir(){
+
+    }
+
 }
 
 class PhotoAManufacturing extends JPanel{
