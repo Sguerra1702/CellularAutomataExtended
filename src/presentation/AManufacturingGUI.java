@@ -20,6 +20,7 @@ public class AManufacturingGUI extends JFrame{
         SIZE=aManufacturing.getSize();
         prepareElements();
         prepareActions();
+        
     }
     
     private void prepareElements() {
